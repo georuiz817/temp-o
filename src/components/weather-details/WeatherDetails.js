@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import WeatherIcons from "../functions-and-arrays/WeatherIcons";
 import TunesArray from "../functions-and-arrays/TunesArray";
-import ReactAnimatedEllipsis from 'react-animated-ellipsis'
+//import ReactAnimatedEllipsis from "react-animated-ellipsis";
 import {
   Title,
   Temp,
@@ -20,7 +20,6 @@ import {
 
 const WeatherDetails = ({ history }) => {
   const [weatherData, setWeatherData] = useState("");
-  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     const data = localStorage.getItem("storedData");
@@ -29,7 +28,7 @@ const WeatherDetails = ({ history }) => {
     } else {
       history.push("/");
     }
-  }, []);
+  }, [history]);
 
   useEffect(() => {
     if (weatherData) {
@@ -38,7 +37,6 @@ const WeatherDetails = ({ history }) => {
   });
 
   let grabAndMountSongs = () => {
-    setLoading(true)
     let getTunesObject = TunesArray.filter((obj) =>
       obj.name.includes(weatherData.weather[0].main)
     ).map((i) => i.songs);
@@ -49,7 +47,6 @@ const WeatherDetails = ({ history }) => {
     var randomElement2 = isoaltedSongs[randomIndex2];
     document.getElementById("iframe-1").setAttribute("src", randomElement1);
     document.getElementById("iframe-2").setAttribute("src", randomElement2);
-    setLoading(false)
   };
 
   return weatherData ? (
@@ -96,6 +93,7 @@ const WeatherDetails = ({ history }) => {
           frameborder="0"
           allowtransparency="true"
           allow="encrypted-media"
+          title="iframe"
         ></iframe>
 
         <iframe
@@ -105,6 +103,7 @@ const WeatherDetails = ({ history }) => {
           frameborder="0"
           allowtransparency="true"
           allow="encrypted-media"
+          title="iframe2"
         ></iframe>
       </MusicContainer>
     </MainContainer>
