@@ -3,7 +3,7 @@ const WeatherIcons = {
     Rain: require("../../rainy-6.svg"),
     Drizzle: require("../../rainy-6.svg"),
     Thunderstorm: require("../../thunder.svg"),
-    Mist: require("../../weatherRandom.svg"),
+    Mist: require("../../rainy-6.svg"),
     Snow: require("../../snowy-6.svg"),
     Clear: require("../../day.svg"),
     Clouds: require("../../cloudy-day-3.svg"),

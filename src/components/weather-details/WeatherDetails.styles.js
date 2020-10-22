@@ -27,6 +27,7 @@ export const MusicContainer = styled.div`
   grid-col-start: 2;
   grid-row-start: 1;
   padding: 5%;
+  margin-top: auto;
   @media screen and (max-width: 650px) {
     grid-col-start: 1;
     grid-row-start: 2;
@@ -85,6 +86,9 @@ export const TouchableButton = styled.div`
   @media screen and (max-width: 650px) {
     justify-self: end;
     margin-right: 10%;
+  }
+  &:hover{
+    background-color: #D3D3D3	 ;  
   }
   
   &:active {

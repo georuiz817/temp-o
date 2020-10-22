@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import WeatherIcons from "../functions-and-arrays/WeatherIcons";
 import TunesArray from "../functions-and-arrays/TunesArray";
-//import ReactAnimatedEllipsis from "react-animated-ellipsis";
+ 
 import {
   Title,
   Temp,
@@ -20,7 +20,7 @@ import {
 
 const WeatherDetails = ({ history }) => {
   const [weatherData, setWeatherData] = useState("");
-
+   
   useEffect(() => {
     const data = localStorage.getItem("storedData");
     if (data) {
@@ -36,19 +36,20 @@ const WeatherDetails = ({ history }) => {
     }
   });
 
+
+
   let grabAndMountSongs = () => {
     let getTunesObject = TunesArray.filter((obj) =>
       obj.name.includes(weatherData.weather[0].main)
     ).map((i) => i.songs);
-    let isoaltedSongs = getTunesObject[0];
-    var randomIndex = Math.floor(Math.random() * isoaltedSongs.length);
-    var randomIndex2 = Math.floor(Math.random() * isoaltedSongs.length);
-    var randomElement1 = isoaltedSongs[randomIndex];
-    var randomElement2 = isoaltedSongs[randomIndex2];
-    document.getElementById("iframe-1").setAttribute("src", randomElement1);
-    document.getElementById("iframe-2").setAttribute("src", randomElement2);
+    let isolatedSongs = getTunesObject[0].sort(() => Math.random() - 0.5);
+    let a = isolatedSongs[0]
+    let b = isolatedSongs[1]
+    document.getElementById("iframe-1").setAttribute("src", a);
+    document.getElementById("iframe-2").setAttribute("src", b);
   };
 
+ 
   return weatherData ? (
     <MainContainer>
       <Container>
@@ -61,12 +62,13 @@ const WeatherDetails = ({ history }) => {
             />
           </WeatherImg>
         ) : (
-          <WeatherImg>loading</WeatherImg>
-        )}
+            <WeatherImg>loading</WeatherImg>
+          )}
         <Title>{weatherData.name}</Title>
         <Temp>{weatherData.main.temp}°</Temp>
         <Desc>{weatherData.weather[0].main}</Desc>
         <AltContainer>
+        {process.env.REACT_APP_TESTER}
           <AltTemps>
             <AltTitle>hi</AltTitle>
             <AltNum>{weatherData.main.temp_max}°</AltNum>
@@ -82,10 +84,11 @@ const WeatherDetails = ({ history }) => {
             localStorage.clear();
           }}
         >
-          <Icon>+</Icon>
+          <Icon>←</Icon>
         </TouchableButton>
       </Container>
       <MusicContainer>
+        <Title>Todays Mood:</Title>
         <iframe
           id="iframe-1"
           width="100%"
@@ -95,7 +98,6 @@ const WeatherDetails = ({ history }) => {
           allow="encrypted-media"
           title="iframe"
         ></iframe>
-
         <iframe
           id="iframe-2"
           width="100%"
@@ -103,7 +105,7 @@ const WeatherDetails = ({ history }) => {
           frameborder="0"
           allowtransparency="true"
           allow="encrypted-media"
-          title="iframe2"
+          title="iframe"
         ></iframe>
       </MusicContainer>
     </MainContainer>
