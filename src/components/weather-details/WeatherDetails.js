@@ -68,7 +68,6 @@ const WeatherDetails = ({ history }) => {
         <Temp>{weatherData.main.temp}°</Temp>
         <Desc>{weatherData.weather[0].main}</Desc>
         <AltContainer>
-        {process.env.REACT_APP_TESTER}
           <AltTemps>
             <AltTitle>hi</AltTitle>
             <AltNum>{weatherData.main.temp_max}°</AltNum>
