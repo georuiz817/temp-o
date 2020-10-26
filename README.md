@@ -10,6 +10,6 @@ Temp(o) was made with React (hooks) and React styled components.
 
 Temp(o) intends to have some new features soon! 
 
-• Login and Signup for users to have the ability to bookmark previsouly searched locations. 
-• Address suggestions when searching for a location. 
-• Using a third party database for songs instead of locally storing song info. 
+• Login and Signup for users to have the ability to bookmark previsouly searched locations.   
+• Address suggestions when searching for a location.   
+• Using a third party database for songs instead of locally storing song info.   
