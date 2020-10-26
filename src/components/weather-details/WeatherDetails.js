@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import WeatherIcons from "../functions-and-arrays/WeatherIcons";
 import TunesArray from "../functions-and-arrays/TunesArray";
- 
+import ReactAnimatedEllipsis from "react-animated-ellipsis";
+
 import {
   Title,
   Temp,
@@ -20,7 +21,7 @@ import {
 
 const WeatherDetails = ({ history }) => {
   const [weatherData, setWeatherData] = useState("");
-   
+
   useEffect(() => {
     const data = localStorage.getItem("storedData");
     if (data) {
@@ -36,20 +37,17 @@ const WeatherDetails = ({ history }) => {
     }
   });
 
-
-
   let grabAndMountSongs = () => {
     let getTunesObject = TunesArray.filter((obj) =>
       obj.name.includes(weatherData.weather[0].main)
     ).map((i) => i.songs);
     let isolatedSongs = getTunesObject[0].sort(() => Math.random() - 0.5);
-    let a = isolatedSongs[0]
-    let b = isolatedSongs[1]
+    let a = isolatedSongs[0];
+    let b = isolatedSongs[1];
     document.getElementById("iframe-1").setAttribute("src", a);
     document.getElementById("iframe-2").setAttribute("src", b);
   };
 
- 
   return weatherData ? (
     <MainContainer>
       <Container>
@@ -62,8 +60,13 @@ const WeatherDetails = ({ history }) => {
             />
           </WeatherImg>
         ) : (
-            <WeatherImg>loading</WeatherImg>
-          )}
+          <WeatherImg>
+            <ReactAnimatedEllipsis
+              fontSize="5rem"
+              spacing="0.3rem"
+            />
+          </WeatherImg>
+        )}
         <Title>{weatherData.name}</Title>
         <Temp>{weatherData.main.temp}°</Temp>
         <Desc>{weatherData.weather[0].main}</Desc>
@@ -87,8 +90,10 @@ const WeatherDetails = ({ history }) => {
         </TouchableButton>
       </Container>
       <MusicContainer>
-        <Title>Todays Mood:</Title>
+        <Title>Todays tempo:</Title>
+ 
         <iframe
+          src=''
           id="iframe-1"
           width="100%"
           height="232"
@@ -98,6 +103,7 @@ const WeatherDetails = ({ history }) => {
           title="iframe"
         ></iframe>
         <iframe
+          src=''
           id="iframe-2"
           width="100%"
           height="232"
@@ -108,7 +114,9 @@ const WeatherDetails = ({ history }) => {
         ></iframe>
       </MusicContainer>
     </MainContainer>
-  ) : null;
+  ) : (
+    null
+  );
 };
 
 export default WeatherDetails;

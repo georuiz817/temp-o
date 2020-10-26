@@ -16,7 +16,7 @@ const SearchWeather = ({ setCity, fetchData }) => {
         <LocationForm onSubmit={fetchData} noValidate autoComplete="off">
           <TextField
             id="outlined-basic"
-            helperText="Zip Code or City Name"
+            helperText="State or City Name"
             label="Location"
             placeholder="Where are you?"
             variant="outlined"
