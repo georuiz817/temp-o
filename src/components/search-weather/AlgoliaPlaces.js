@@ -1,7 +1,7 @@
 import React from "react";
 import AlgoliaPlaces from "algolia-places-react";
 
-export default ({ setZip, fetchData, setCountryCode }) => {
+export default ({ setZip, fetchData, setCountryCode, setLat, setLng }) => {
   const appId = process.env.REACT_APP_APP_ID;
   const apiKey = process.env.REACT_APP_ALGOLIA_API_KEY;
 

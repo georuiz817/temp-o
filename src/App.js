@@ -16,8 +16,7 @@ function App() {
     try {
       let data = await (
         await fetch(
-          `https:/api.openweathermap.org/data/2.5/weather?zip=${zip},${countryCode}&appid=${api_key}&units=imperial
-          `
+          `https:/api.openweathermap.org/data/2.5/weather?zip=${zip},${countryCode}&appid=${api_key}&units=imperial`
         )
       ).json();
       if (data.cod === 200) {
