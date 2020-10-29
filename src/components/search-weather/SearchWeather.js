@@ -1,29 +1,23 @@
 import React from "react";
-import { TextField } from "@material-ui/core";
+
+import AlgoliaPlaces from "./AlgoliaPlaces";
 
 import {
   Container,
   Title,
   OuterLocationSearch,
   LocationForm,
+  Helper,
 } from "./SearchWeather.styles";
 
-const SearchWeather = ({ setCity, fetchData }) => {
+const SearchWeather = ({setZip, fetchData, setCountryCode }) => {
   return (
-    <Container >
+    <Container>
       <Title>Temp(o)</Title>
       <OuterLocationSearch>
-        <LocationForm onSubmit={fetchData} noValidate autoComplete="off">
-          <TextField
-            id="outlined-basic"
-            helperText="State or City Name"
-            label="Location"
-            placeholder="Where are you?"
-            variant="outlined"
-            required
-            fullWidth
-            onChange={(e) => setCity(e.target.value)}
-          />
+        <LocationForm onSubmit={fetchData}>
+          <AlgoliaPlaces  setCountryCode={setCountryCode} setZip={setZip} fetchData={fetchData} />
+          <Helper>Zip Code or City Name</Helper>
         </LocationForm>
       </OuterLocationSearch>
     </Container>

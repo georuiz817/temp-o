@@ -23,7 +23,7 @@ export const OuterLocationSearch = styled.div`
   max-height: 118px;
   min-height: auto;
   border-radius: 42px;
-  align-items: center;
+ 
   background-color: #bdcbdb;
   @media screen and (max-width: 650px) {
     max-width: 100%;
@@ -35,4 +35,14 @@ export const LocationForm = styled.form`
   margin-top: 6%;
   margin-left: 6%;
   margin-right: 6%;
+`;
+
+export const Helper = styled.div`
+margin-top: 3%;
+margin-left: 6%;
+margin-right: 6%;
+margin-bottom: 6%;
+font-size: 10px;
+text-align: left;
+color: white;
 `;

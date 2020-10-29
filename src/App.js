@@ -6,28 +6,29 @@ import SearchWeather from "./components/search-weather/SearchWeather";
 import WeatherDetails from "./components/weather-details/WeatherDetails";
 
 function App() {
-  const [city, setCity] = useState("");
+  const [zip, setZip] = useState("");
+  const [countryCode, setCountryCode] = useState("");
   let history = useHistory();
   const api_key = process.env.REACT_APP_API_KEY;
-
+  
   const fetchData = async (e) => {
     e.preventDefault();
     try {
       let data = await (
         await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${api_key}
+          `https:/api.openweathermap.org/data/2.5/weather?zip=${zip},${countryCode}&appid=${api_key}&units=imperial
           `
         )
       ).json();
       if (data.cod === 200) {
         localStorage.setItem("storedData", JSON.stringify(data));
-        setCity("");
+        setZip("");
         history.push("/weatherDetails");
       } else {
         alert("location not found!");
       }
     } catch (err) {
-      console.log("error!!!!!!!!!!!!!!!!!!!!");
+      console.log("error" + err);
     }
   };
 
@@ -39,8 +40,9 @@ function App() {
         render={(routerProps) => (
           <SearchWeather
             {...routerProps}
-            setCity={setCity}
+            setZip={setZip}
             fetchData={fetchData}
+            setCountryCode={setCountryCode}
           />
         )}
       />

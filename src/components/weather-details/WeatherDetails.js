@@ -61,10 +61,7 @@ const WeatherDetails = ({ history }) => {
           </WeatherImg>
         ) : (
           <WeatherImg>
-            <ReactAnimatedEllipsis
-              fontSize="5rem"
-              spacing="0.3rem"
-            />
+            <ReactAnimatedEllipsis fontSize="5rem" spacing="0.3rem" />
           </WeatherImg>
         )}
         <Title>{weatherData.name}</Title>
@@ -91,9 +88,8 @@ const WeatherDetails = ({ history }) => {
       </Container>
       <MusicContainer>
         <Title>Todays tempo:</Title>
- 
         <iframe
-          src=''
+          src=""
           id="iframe-1"
           width="100%"
           height="232"
@@ -103,7 +99,7 @@ const WeatherDetails = ({ history }) => {
           title="iframe"
         ></iframe>
         <iframe
-          src=''
+          src=""
           id="iframe-2"
           width="100%"
           height="232"
@@ -115,7 +111,11 @@ const WeatherDetails = ({ history }) => {
       </MusicContainer>
     </MainContainer>
   ) : (
-    null
+    <MainContainer>
+      <Desc>
+        <ReactAnimatedEllipsis fontSize="5rem" spacing="0.3rem" />
+      </Desc>
+    </MainContainer>
   );
 };
 

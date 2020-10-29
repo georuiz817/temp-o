@@ -1,29 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #A7BACF;  
+  background-color: #a7bacf;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.myCustomClass{
+.myCustomClass {
   z-index: 0;
 }
- 
-iframe{
- 
+
+iframe {
   border-radius: 15px;
 }
 
-
-hr{
+hr {
   background-color: black;
- 
 }
+
+.ap-input{
+  background-color: #bdcbdb;
+  border: white solid 1.5px;
+  height: 3.5rem;
+}
+
+.ap-input::placeholder{
+  color: black;
+}
+
+.ap-input:hover ~ .ap-input-icon svg,
+.ap-input:focus ~ .ap-input-icon svg,
+.ap-input-icon:hover svg {
+  fill: black;
+}
+
+.ap-input-icon svg{
+  fill: black;
+}
+
+
+.ap-input, .ap-dropdown-menu{
+  border-radius: 5px;
+  color: black;
+}
+
+.ap-dropdown-menu{
+  text-align: left;
+}
+ 
