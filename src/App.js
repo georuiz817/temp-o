@@ -18,7 +18,7 @@ function App() {
         await fetch(
           `https:/api.openweathermap.org/data/2.5/weather?zip=${zip},${countryCode}&appid=${api_key}&units=imperial`
         )
-      ).JSON();
+      ).json();
       if (data.cod === 200) {
         localStorage.setItem("storedData", JSON.stringify(data));
         setZip("");
