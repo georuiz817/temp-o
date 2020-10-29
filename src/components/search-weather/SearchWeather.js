@@ -13,6 +13,7 @@ import {
 const SearchWeather = ({setZip, fetchData, setCountryCode }) => {
   return (
     <Container>
+      <h1 style={{color: "black"}}>Website currently under construction for a few days (10/29/2020)</h1>
       <Title>Temp(o)</Title>
       <OuterLocationSearch>
         <LocationForm onSubmit={fetchData}>
