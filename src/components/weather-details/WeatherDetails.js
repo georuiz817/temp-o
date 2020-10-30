@@ -16,6 +16,7 @@ import {
   WeatherImg,
   MainContainer,
   MusicContainer,
+  RandomBtn,
 } from "./WeatherDetails.styles";
 
 const WeatherDetails = ({ history, TunesArray}) => {
@@ -86,7 +87,7 @@ const WeatherDetails = ({ history, TunesArray}) => {
         </TouchableButton>
       </Container>
       <MusicContainer>
-        <Title>Todays tempo:</Title>
+        <Title>Todays tempo - <RandomBtn onClick={() =>{grabAndMountSongs()}}>Random</RandomBtn></Title>
         <iframe
           src=""
           id="iframe-1"
@@ -107,7 +108,6 @@ const WeatherDetails = ({ history, TunesArray}) => {
           allow="encrypted-media"
           title="iframe"
         ></iframe>
-        <button onClick={() =>{grabAndMountSongs()}}>Random</button>
       </MusicContainer>
     </MainContainer>
   ) : (

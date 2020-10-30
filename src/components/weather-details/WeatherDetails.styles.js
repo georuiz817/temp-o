@@ -105,3 +105,23 @@ export const WeatherImg = styled.div`
   margin-left: -5%;
 `;
 
+export const RandomBtn = styled.div`
+background-color: white;
+border-radius: 100px;
+color: black;
+padding: 10px;  
+text-align: center;
+text-decoration: none;
+display: inline-block;
+cursor: pointer;
+font-size: 1rem;
+&:hover{
+  background-color: #D3D3D3	 ;  
+}
+
+&:active {
+  background-color: #bfbfbf;
+}
+ 
+ 
+`

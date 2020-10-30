@@ -9,7 +9,9 @@ import {
   LocationForm,
   Helper,
   ErrorMsg,
+  SearchBtn,
 } from "./SearchWeather.styles";
+ 
 
 const SearchWeather = ({ setZip, fetchData, setCountryCode, error }) => {
   return (
@@ -29,6 +31,7 @@ const SearchWeather = ({ setZip, fetchData, setCountryCode, error }) => {
               "Zip Code or City Name"
             )}
           </Helper>
+          <SearchBtn type="submit">Submit</SearchBtn>
         </LocationForm>
       </OuterLocationSearch>
     </Container>
