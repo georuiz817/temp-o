@@ -52,15 +52,15 @@ const TunesArray = [
     songs: [
       "https://www.youtube.com/embed/DGIXT7ce3vQ",
       "https://www.youtube.com/embed/xGRjCa49C6U",
-      "https://www.youtube.com/embed/TdrL3QxjyVw",
-      "https://www.youtube.com/embed/ebXbLfLACGM",
+      "https://www.youtube.com/embed/rZGi1SCj1fU",
+      "https://www.youtube.com/embed/VQsSRWVvbPI",
 
       "https://www.youtube.com/embed/hUjUhZ1Yy7Y",
       "https://www.youtube.com/embed/LgSmnx2fQ0E",
-      "https://www.youtube.com/embed/Vj_UEJjUIQ4",
+      "https://www.youtube.com/embed/xsqn1zvZ6kI",
       "https://www.youtube.com/embed/oFRFaI0Ntvk",
       "https://www.youtube.com/embed/BywDOO99Ia0",
-      "https://www.youtube.com/embed/KIYiGA_rIls",
+      "https://www.youtube.com/embed/E_q5cNea__s",
     ],
   },
   {

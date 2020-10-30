@@ -105,10 +105,12 @@ export const WeatherImg = styled.div`
   margin-left: -5%;
 `;
 
-export const RandomBtn = styled.div`
+export const RandomBtn = styled.button`
+border: none;
+outline: none;
 background: white;
 background-color: white;
-border-radius: 100px;
+border-radius: 15px;
 color: black;
 padding: 10px;  
 text-align: center;

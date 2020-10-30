@@ -57,7 +57,7 @@ background-color: white;
 margin-bottom: 6%;
 font-size: 1rem;
 text-align: left;
-border-radius: 15px;  
+border-radius: 15px;
 border: none;
 outline: none;
 color: black;
