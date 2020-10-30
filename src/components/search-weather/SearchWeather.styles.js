@@ -46,3 +46,7 @@ export const Helper = styled.div`
   text-align: left;
   color: white;
 `;
+
+export const ErrorMsg = styled.span`
+color: red;
+`

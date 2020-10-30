@@ -18,7 +18,7 @@ import {
   MusicContainer,
 } from "./WeatherDetails.styles";
 
-const WeatherDetails = ({ history, TunesArray }) => {
+const WeatherDetails = ({ history, TunesArray}) => {
   const [weatherData, setWeatherData] = useState("");
 
   useEffect(() => {
@@ -107,6 +107,7 @@ const WeatherDetails = ({ history, TunesArray }) => {
           allow="encrypted-media"
           title="iframe"
         ></iframe>
+        <button onClick={() =>{grabAndMountSongs()}}>Random</button>
       </MusicContainer>
     </MainContainer>
   ) : (

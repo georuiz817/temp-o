@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import { useHistory } from "react-router-dom";
@@ -9,9 +9,10 @@ import TunesArray from './components/functions-and-arrays/TunesArray';
 function App() {
   const [zip, setZip] = useState("");
   const [countryCode, setCountryCode] = useState("");
+  const [error, setError] = useState(false);
   let history = useHistory();
   const api_key = process.env.REACT_APP_API_KEY;
-  
+
   const fetchData = async (e) => {
     e.preventDefault();
     try {
@@ -23,9 +24,10 @@ function App() {
       if (data.cod === 200) {
         localStorage.setItem("storedData", JSON.stringify(data));
         setZip("");
+        setError(false)
         history.push("/weatherDetails");
       } else {
-        alert("Selected cities weather not avaliable");
+        setError(true);
       }
     } catch (err) {
       console.log("error" + err);
@@ -43,6 +45,7 @@ function App() {
             setZip={setZip}
             fetchData={fetchData}
             setCountryCode={setCountryCode}
+            error={error}
           />
         )}
       />

@@ -8,16 +8,27 @@ import {
   OuterLocationSearch,
   LocationForm,
   Helper,
+  ErrorMsg,
 } from "./SearchWeather.styles";
 
-const SearchWeather = ({setZip, fetchData, setCountryCode }) => {
+const SearchWeather = ({ setZip, fetchData, setCountryCode, error }) => {
   return (
     <Container>
       <Title>Temp(o)</Title>
       <OuterLocationSearch>
         <LocationForm onSubmit={fetchData}>
-          <AlgoliaPlaces  setCountryCode={setCountryCode} setZip={setZip} fetchData={fetchData} />
-          <Helper>Zip Code or City Name</Helper>
+          <AlgoliaPlaces
+            setCountryCode={setCountryCode}
+            setZip={setZip}
+            fetchData={fetchData}
+          />
+          <Helper>
+            {error ? (
+              <ErrorMsg>Selected location not avaliable</ErrorMsg>
+            ) : (
+              "Zip Code or City Name"
+            )}
+          </Helper>
         </LocationForm>
       </OuterLocationSearch>
     </Container>

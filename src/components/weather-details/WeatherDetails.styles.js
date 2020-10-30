@@ -104,3 +104,4 @@ export const WeatherImg = styled.div`
   width: 40%;
   margin-left: -5%;
 `;
+
