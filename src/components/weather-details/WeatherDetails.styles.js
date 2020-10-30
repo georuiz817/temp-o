@@ -106,6 +106,7 @@ export const WeatherImg = styled.div`
 `;
 
 export const RandomBtn = styled.div`
+background: white;
 background-color: white;
 border-radius: 100px;
 color: black;
@@ -115,6 +116,7 @@ text-decoration: none;
 display: inline-block;
 cursor: pointer;
 font-size: 1rem;
+backdrop-filter: blur(30px);
 &:hover{
   background-color: #D3D3D3	 ;  
 }
