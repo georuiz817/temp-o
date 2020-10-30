@@ -52,7 +52,8 @@ color: red;
 `
 
 export const SearchBtn = styled.button`
- 
+background: white;
+background-color: white;
 margin-bottom: 6%;
 font-size: 1rem;
 text-align: left;
