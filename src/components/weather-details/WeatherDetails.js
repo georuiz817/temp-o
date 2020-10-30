@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import WeatherIcons from "../functions-and-arrays/WeatherIcons";
-import TunesArray from "../functions-and-arrays/TunesArray";
 import ReactAnimatedEllipsis from "react-animated-ellipsis";
 
 import {
@@ -19,7 +18,7 @@ import {
   MusicContainer,
 } from "./WeatherDetails.styles";
 
-const WeatherDetails = ({ history }) => {
+const WeatherDetails = ({ history, TunesArray }) => {
   const [weatherData, setWeatherData] = useState("");
 
   useEffect(() => {

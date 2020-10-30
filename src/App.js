@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import SearchWeather from "./components/search-weather/SearchWeather";
 import WeatherDetails from "./components/weather-details/WeatherDetails";
+import TunesArray from './components/functions-and-arrays/TunesArray';
 
 function App() {
   const [zip, setZip] = useState("");
@@ -24,7 +25,7 @@ function App() {
         setZip("");
         history.push("/weatherDetails");
       } else {
-        alert("location not found!");
+        alert("Selected cities weather not avaliable");
       }
     } catch (err) {
       console.log("error" + err);
@@ -49,7 +50,7 @@ function App() {
         exact
         path="/weatherDetails"
         render={(routerProps) => (
-          <WeatherDetails {...routerProps} history={history} />
+          <WeatherDetails {...routerProps} TunesArray={TunesArray} history={history} />
         )}
       />
     </Switch>
