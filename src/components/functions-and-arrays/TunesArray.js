@@ -1,9 +1,11 @@
-// Array holding example music for now. Newer version will use spotify developer api or another resource to
+//good practice of working with arrays
+// Array holding  music links for now. Newer version will use spotify developer api or another resource to ->
 // fetch the music based on the weather description.
 
+//
 const TunesArray = [
   {
-    name: ["Clouds",'Smoke','Haze', 'Dust', 'Fog'],
+    name: ["Clouds", "Smoke", "Haze", "Dust", "Fog"],
     songs: [
       "https://www.youtube.com/embed/27Uafm8uVn4",
       "https://www.youtube.com/embed/imE3f4bCoeU",
@@ -18,7 +20,7 @@ const TunesArray = [
     ],
   },
   {
-    name: ["Rain",'Drizzle','Thunderstorm', 'Mist'],
+    name: ["Rain", "Drizzle", "Thunderstorm", "Mist"],
     songs: [
       "https://www.youtube.com/embed/yMRoNNKWuqQ",
       "https://www.youtube.com/embed/HmH4W8JOifg",
@@ -33,7 +35,7 @@ const TunesArray = [
     ],
   },
   {
-    name: ['Snow'],
+    name: ["Snow"],
     songs: [
       "https://www.youtube.com/embed/7BrIJrjxVxA",
       "https://www.youtube.com/embed/JqTVHTgRW5g",
@@ -48,7 +50,7 @@ const TunesArray = [
     ],
   },
   {
-    name: ['Clear'],
+    name: ["Clear"],
     songs: [
       "https://www.youtube.com/embed/DGIXT7ce3vQ",
       "https://www.youtube.com/embed/xGRjCa49C6U",
@@ -64,14 +66,12 @@ const TunesArray = [
     ],
   },
   {
-    name: ['Sand', 'Ash', 'Squall', 'Tornado'],
+    name: ["Sand", "Ash", "Squall", "Tornado"],
     songs: [
       "https://www.youtube.com/embed/22AzYEWPp4A",
       "https://www.youtube.com/embed/6MYQZIZqn6E",
     ],
   },
 ];
- 
-export default TunesArray
 
-
+export default TunesArray;

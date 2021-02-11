@@ -48,27 +48,27 @@ export const Helper = styled.div`
 `;
 
 export const ErrorMsg = styled.span`
-color: red;
-`
+  color: red;
+`;
 
 export const SearchBtn = styled.button`
-background: white;
-background-color: white;
-margin-bottom: 6%;
-font-size: 1rem;
-text-align: left;
-border-radius: 15px;
-border: none;
-outline: none;
-color: black;
-padding: 10px;
-cursor: pointer;
+  background: white;
+  background-color: white;
+  margin-bottom: 6%;
+  font-size: 1rem;
+  text-align: left;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
 
-&:hover{
-  background-color: #D3D3D3	 ;  
-}
+  &:hover {
+    background-color: #d3d3d3;
+  }
 
-&:active {
-  background-color: #bfbfbf;
-}
-`
+  &:active {
+    background-color: #bfbfbf;
+  }
+`;

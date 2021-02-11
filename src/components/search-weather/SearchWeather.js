@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { fetchData } from "../functions-and-arrays/Functions";
 import AlgoliaPlaces from "./AlgoliaPlaces";
 
 import {
@@ -11,19 +11,22 @@ import {
   ErrorMsg,
   SearchBtn,
 } from "./SearchWeather.styles";
- 
 
-const SearchWeather = ({ setZip, fetchData, setCountryCode, error }) => {
+const SearchWeather = ({ history }) => {
+  const [zip, setZip] = useState("");
+  const [countryCode, setCountryCode] = useState("");
+  const [error, setError] = useState(false);
+
   return (
     <Container>
       <Title>Temp(o)</Title>
       <OuterLocationSearch>
-        <LocationForm onSubmit={fetchData}>
-          <AlgoliaPlaces
-            setCountryCode={setCountryCode}
-            setZip={setZip}
-            fetchData={fetchData}
-          />
+        <LocationForm
+          onSubmit={(e) =>
+            fetchData(e, zip, countryCode, setZip, setError, history)
+          }
+        >
+          <AlgoliaPlaces setCountryCode={setCountryCode} setZip={setZip} />
           <Helper>
             {error ? (
               <ErrorMsg>Selected location not avaliable</ErrorMsg>

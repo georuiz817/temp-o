@@ -2,17 +2,16 @@ import styled from "styled-components";
 
 export const MainContainer = styled.div`
   display: grid;
-  grid-template-columns: 50%; 50%;
+  grid-template-columns: 50%;
   grid-template-rows: auto;
   margin-top: 5%;
   @media screen and (max-width: 650px) {
-    grid-template-columns: 100%; 100%;
+    grid-template-columns: 100%;
   }
 `;
 
 export const Container = styled.div`
   padding-left: 10%;
-  grid-col-start: 1;
   grid-row-start: 1;
   margin: 0 5% 5% 5%;
   display: grid;
@@ -24,7 +23,6 @@ export const Container = styled.div`
 `;
 
 export const MusicContainer = styled.div`
-  grid-col-start: 2;
   grid-row-start: 1;
   padding: 5%;
   margin-top: auto;
@@ -70,6 +68,11 @@ export const AltNum = styled.span`
   margin-right: 20%;
 `;
 
+export const WeatherImg = styled.div`
+  width: 40%;
+  margin-left: -5%;
+`;
+
 export const TouchableButton = styled.div`
   width: 56px;
   height: 56px;
@@ -99,33 +102,3 @@ export const TouchableButton = styled.div`
 export const Icon = styled.div`
   cursor: pointer;
 `;
-
-export const WeatherImg = styled.div`
-  width: 40%;
-  margin-left: -5%;
-`;
-
-export const RandomBtn = styled.button`
-border: none;
-outline: none;
-background: white;
-background-color: white;
-border-radius: 15px;
-color: black;
-padding: 10px;  
-text-align: center;
-text-decoration: none;
-display: inline-block;
-cursor: pointer;
-font-size: 1rem;
-backdrop-filter: blur(30px);
-&:hover{
-  background-color: #D3D3D3	 ;  
-}
-
-&:active {
-  background-color: #bfbfbf;
-}
- 
- 
-`
