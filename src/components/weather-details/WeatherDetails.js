@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { randomizeSongs } from "../functions-and-arrays/Functions";
 import WeatherIcons from "../functions-and-arrays/WeatherIcons";
 import ReactAnimatedEllipsis from "react-animated-ellipsis";
-//import { Button } from "@material-ui/core";
 
 import {
   Title,
@@ -13,8 +12,6 @@ import {
   AltTitle,
   AltNum,
   AltContainer,
-  TouchableButton,
-  Icon,
   WeatherImg,
   MainContainer,
   MusicContainer,
@@ -42,13 +39,16 @@ const WeatherDetails = ({ history, TunesArray }) => {
       <MainContainer>
         <Container>
           {weatherData.weather[0].main ? (
-            <WeatherImg>
-              <img
-                src={WeatherIcons.main[weatherData.weather[0].main]}
-                alt="fdafda"
-                width="50%"
-              />
-            </WeatherImg>
+            <div>
+              <h1>Temp° </h1>
+              <WeatherImg>
+                <img
+                  src={WeatherIcons.main[weatherData.weather[0].main]}
+                  alt="fdafda"
+                  width="50%"
+                />
+              </WeatherImg>
+            </div>
           ) : (
             <WeatherImg>
               <ReactAnimatedEllipsis fontSize="5rem" spacing="0.3rem" />
@@ -67,16 +67,9 @@ const WeatherDetails = ({ history, TunesArray }) => {
               <AltNum>{weatherData.main.temp_min}°</AltNum>
             </AltTemps>
           </AltContainer>
-          <TouchableButton
-          onClick={() => {
-            history.push("/");
-            localStorage.clear();
-          }}
-        >
-          <Icon>←</Icon>
-        </TouchableButton>
         </Container>
         <MusicContainer>
+          <h1>Tempo ♫</h1>
           <iframe
             src=""
             id="iframe-1"

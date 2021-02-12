@@ -4,7 +4,7 @@ export const MainContainer = styled.div`
   display: grid;
   grid-template-columns: 50%;
   grid-template-rows: auto;
-  margin-top: 5%;
+  margin-top: 1%;
   @media screen and (max-width: 650px) {
     grid-template-columns: 100%;
   }
@@ -24,8 +24,8 @@ export const Container = styled.div`
 
 export const MusicContainer = styled.div`
   grid-row-start: 1;
-  padding: 5%;
-  margin-top: auto;
+  padding: 0 5% 5% 5%;
+  
   @media screen and (max-width: 650px) {
     grid-col-start: 1;
     grid-row-start: 2;
@@ -73,32 +73,3 @@ export const WeatherImg = styled.div`
   margin-left: -5%;
 `;
 
-export const TouchableButton = styled.div`
-  width: 56px;
-  height: 56px;
-  background-color: white;
-  padding: 5px;
-  border-radius: 100px;
-  backdrop-filter: blur(30px);
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  justify-self: center;
-  @media screen and (max-width: 650px) {
-    justify-self: end;
-    margin-right: 10%;
-  }
-  &:hover{
-    background-color: #D3D3D3	 ;  
-  }
-  
-  &:active {
-    background-color: #bfbfbf;
-  }
-`;
-
-export const Icon = styled.div`
-  cursor: pointer;
-`;
