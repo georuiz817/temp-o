@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
+  padding: 0 10% 0 4%;
   display: grid;
-  grid-template-columns: 50%;
+  grid-template-columns: auto auto;
   grid-template-rows: auto;
   margin-top: 1%;
   @media screen and (max-width: 650px) {
@@ -13,22 +14,10 @@ export const MainContainer = styled.div`
 export const Container = styled.div`
   padding-left: 10%;
   grid-row-start: 1;
-  margin: 0 5% 5% 5%;
-  display: grid;
-  width: 100%;
-  @media screen and (max-width: 650px) {
-    padding-left: 0;
-    width: 100%;
-  }
-`;
 
-export const MusicContainer = styled.div`
-  grid-row-start: 1;
-  padding: 0 5% 5% 5%;
-  
   @media screen and (max-width: 650px) {
-    grid-col-start: 1;
-    grid-row-start: 2;
+    margin: 0 0 0 0;
+    padding-left: 0;
   }
 `;
 
@@ -48,28 +37,30 @@ export const Desc = styled.div`
 `;
 
 export const AltContainer = styled.div`
-  display: inline-block;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  grid-column-gap: 0;
 `;
 
 export const AltTemps = styled.div`
-  display: inline-block;
+  display: grid;
   color: #595959;
 `;
 
 export const AltTitle = styled.span`
   font-size: 18px;
   margin-bottom: 3px;
-  display: inline-block;
-  margin-right: 5%;
+ 
 `;
 
 export const AltNum = styled.span`
   font-size: 35px;
-  margin-right: 20%;
+ 
 `;
 
 export const WeatherImg = styled.div`
-  width: 40%;
+  width: 50%;
   margin-left: -5%;
 `;
-

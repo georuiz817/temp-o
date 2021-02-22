@@ -10,8 +10,6 @@
     "add": "^2.0.6",
     "algolia-places-react": "^1.6.0",
     "dotenv": "^8.2.0",
-    "fahrenheit-to-celsius": "^1.0.0",
-    "firebase": "^8.0.0",
     "places.js": "^1.19.0",
     "react": "^16.13.1",
     "react-animated-ellipsis": "^1.0.0",

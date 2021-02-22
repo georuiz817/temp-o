@@ -41,3 +41,11 @@ export const fetchData = async (
     console.log("error" + err);
   }
 };
+
+export const tempConvert = (x) => {
+  return Math.round((5 / 9) * (parseInt(x) - 32));
+};
+
+
+
+
