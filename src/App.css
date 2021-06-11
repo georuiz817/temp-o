@@ -32,6 +32,13 @@
   color: 		 	#A9A9A9;
 }
 
+.alt-degree:hover{
+  cursor: pointer;
+}
+
+.current-degree:hover{
+  cursor: pointer;
+}
  
 
 @keyframes App-logo-spin {

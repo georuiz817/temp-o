@@ -1,6 +1,6 @@
 import React from "react";
 import WeatherIcons from "../functions-and-arrays/WeatherIcons";
- 
+
 import { tempConvert } from "../functions-and-arrays/Functions";
 
 import {
@@ -62,7 +62,7 @@ export default function WeatherContainer({
             setDegreeType(true);
           }}
         >
-          F | <span className="alt-degree">C</span>
+          <span className='current-degree'>F</span> | <span className="alt-degree">C</span>
         </h2>
       ) : (
         <h2
@@ -70,7 +70,7 @@ export default function WeatherContainer({
             setDegreeType(false);
           }}
         >
-          C | <span className="alt-degree">F</span>
+          <span  className='current-degree'> C</span> | <span className="alt-degree">F</span>
         </h2>
       )}
     </Container>
